@@ -5,7 +5,7 @@ def safe_print_list(my_list=[], x=0):
         for i in my_list[:x]:
             print(end="{}".format(i))
             count += 1
-            print()
+        print()
     except TypeError:
         print()
-        return count
+    return count
