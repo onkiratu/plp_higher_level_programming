@@ -12,4 +12,4 @@ class Square:
         Attributes:
             _size (int): the size of the square.
         """
-        self._size = size
+        self._Square_size = size
