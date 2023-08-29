@@ -9,7 +9,6 @@ class Square:
     Attributes:
         size (int): The size of square
     """
-        
 
     def __init__(self, size):
         """
