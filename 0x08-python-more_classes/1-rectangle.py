@@ -1,6 +1,13 @@
 #!/usr/bin/python3
+
 """
 This module contains a class  that defines a rectangle
+
+functions:
+        width(self)
+        width(self, value)
+        height(self)
+        height(self, value)
 """
 
 
