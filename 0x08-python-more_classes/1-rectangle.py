@@ -23,8 +23,8 @@ class Rectangle:
         self.__width: width of the rectangle
         self.__height: height of the rectanle
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -88,3 +88,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
 
         self.__height = value
+
+    def print_value(self):
+        print(f"width: {self.__width}")
+        print(f"Height: {self.__height}")
