@@ -117,7 +117,10 @@ class Rectangle:
             Rectangle
         """
         rect = ""
-        
+
+        if width == 0 or height == 0:
+            return rect = ""
+
         for rows in range(self.height):
             for elements in range(self.width):
                 rect += "#"
