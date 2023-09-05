@@ -118,12 +118,12 @@ class Rectangle:
         """
         rect = ""
 
-        if width == 0 or height == 0:
-            return rect = ""
-
-        for rows in range(self.height):
-            for elements in range(self.width):
-                rect += "#"
-            if rows < self.height - 1:
-                rect += '\n'
+        if self.width == 0 or self.height == 0:
+            return rect
+        else:
+            for rows in range(self.height):
+                for elements in range(self.width):
+                    rect += "#"
+                if rows < self.height - 1:
+                    rect += '\n'
         return rect
