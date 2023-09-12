@@ -1,3 +1,28 @@
->>> MyList = __import__('1-my_list').MyList
+#!/usr/bin/python3
+"""
+Unittests for MyList class.
+"""
 
->>> Mylist(3
+import unittest
+import sys
+import io
+from contextlib import redirect_stdout
+from models.base import MyList
+
+class TestMyList(unittest.TestCase):
+    def test_print_sorted(self):
+        my_list = MyList([4, 2, 8, 1, 6])
+
+        # Redirect stdout to capture the printed output
+        captured_output = io.StringIO()
+        with redirect_stdout(captured_output):
+            my_list.print_sorted()
+
+        # Get the printed output as a string
+        printed_output = captured_output.getvalue()
+
+        # Check if the printed output is sorted
+        self.assertEqual(printed_output, "[1, 2, 4, 6, 8]\n")
+
+if __name__ == "__main__":
+    unittest.main()
