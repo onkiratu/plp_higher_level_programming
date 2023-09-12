@@ -15,6 +15,4 @@ def to_json_string(my_obj):
     Return:
         JSON rep of my_obj
     """
-    string = json.dumps(my_obj)
-
-    return string
+    return json.dumps(my_obj)
