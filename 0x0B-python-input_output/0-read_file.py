@@ -12,6 +12,7 @@ def read_file(filename=""):
         filename: name of the file to read from
     """
 
-    with open("my_file_0.txt", mode='r', encoding='utf-8') as file:
+    with open(filename, mode='r', encoding='utf-8') as file:
         file = file.read()
-        print(file)
+        for line in file:
+            print(line, end='')
