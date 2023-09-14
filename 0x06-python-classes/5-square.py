@@ -48,8 +48,8 @@ class Square:
         """
         Prints in stdout the square with the character #
         """
-        for row in range(self.__size):
-            if self.__size == 0:
-                print()
+        if self.__size == 0:
+            print()
 
+        for row in range(self.__size):
             print("{}".format("#") * self.__size)
