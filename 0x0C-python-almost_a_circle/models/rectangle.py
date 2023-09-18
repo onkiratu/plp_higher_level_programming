@@ -11,7 +11,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__init__(id)
+        Base.__init__(self, id)
 
         if not isinstance(self.__height, int):
             raise TypeError("height must be an integer")
