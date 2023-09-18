@@ -40,35 +40,3 @@ class Square(Rectangle):
         else:
             self.width = new_value
             self.height = new_value
-
-
-     def update(self, *args, **kwargs):
-        """ Assign attributes """
-        if args is not None and len(args) is not 0:
-            my_list = ['id', 'size', 'x', 'y']
-            for i in range(len(args)):
-                if my_list[i] == 'size':
-                    setattr(self, 'width', args[i])
-                    setattr(self, 'height', args[i])
-                else:
-                    setattr(self, my_list[i], args[i])
-        else:
-            for key, value in kwargs.items():
-                if key == 'size':
-                    setattr(self, 'width', value)
-                    setattr(self, 'height', value)
-                else:
-                    setattr(self, key, value)
-
-    def to_dictionary(self):
-        """ Returns a dictionary with attributes """
-        my_list = ['id', 'size', 'x', 'y']
-        dict_res = {}
-
-        for key in my_list:
-            if key == 'size':
-                dict_res[key] = getattr(self, 'width')
-            else:
-                dict_res[key] = getattr(self, key)
-
-        return dict_res
