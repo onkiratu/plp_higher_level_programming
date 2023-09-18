@@ -3,6 +3,7 @@
 
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """
     Class inherits from Rectangle
@@ -31,7 +32,7 @@ class Square(Rectangle):
 
     Args:
         new_value: value to set to height and width
-    """ 
+    """
         if not isinstance(new_value, int):
             raise TypeError("width must be an integer")
         elif new_value <= 0:
