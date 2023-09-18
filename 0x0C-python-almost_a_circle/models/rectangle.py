@@ -4,11 +4,31 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
-    """Class inherits from Base"""
+    """
+    Rectangle class inherits from Base
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """initilizing class attributes"""
+        """
+        initilizing class attributes
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int, optional): The x-coordinate of the rectangle's position
+                (default is 0).
+            y (int, optional): The y-coordinate of the rectangle's position
+                (default is 0).
+            id (int, optional): The ID of the rectangle (default is None).
+
+        Raises:
+            TypeError: If any of the arguments (width, height, x, or y) is not
+                an integer.
+            ValueError: If width or height is not greater than 0, or if x or y
+                is less than 0.
+        """
         super().__init__(id)
         self.width = width
         self.height = height
