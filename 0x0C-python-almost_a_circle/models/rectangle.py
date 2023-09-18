@@ -141,4 +141,4 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("y must be an integer")
         else:
-            self.__y = value 
+            self.__y = value
