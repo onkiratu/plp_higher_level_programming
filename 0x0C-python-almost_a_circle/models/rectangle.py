@@ -150,3 +150,12 @@ class Rectangle(Base):
         Area of Rectangle instance
         """
         return self.__width * self.__height
+
+    def display(self):
+        """Prints in stdout the Rectangle instance with character #"""
+        for i in range(self.__y):
+            print()
+            for row in range(self.__height):
+                for i in range(self.__x):
+                    print(" ", end="")
+                print("{}".format("#") * self.__width)
