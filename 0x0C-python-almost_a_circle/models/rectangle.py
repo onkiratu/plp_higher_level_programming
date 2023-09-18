@@ -4,9 +4,9 @@
 
 from models.base import Base
 
-
 class Rectangle(Base):
     """Class inherits from Base"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """initilizing class attributes"""
         super().__init__(id)
