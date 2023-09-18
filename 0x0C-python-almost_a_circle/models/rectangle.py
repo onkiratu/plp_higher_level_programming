@@ -5,7 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class inherits from Base"""
-    def __init__(self, width, height, x =0, y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """initilizing class attributes"""
         self.__width = width
         self.__height = height
@@ -37,11 +37,11 @@ class Rectangle(Base):
         if self.__y < 0:
             raise ValueError("y must be >= 0")
 
-    
     @property
     def width(self):
         """returns the value of width"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """
@@ -57,11 +57,11 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-
     @property
     def height(self):
         """returns the value of height"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """
@@ -81,6 +81,7 @@ class Rectangle(Base):
     def x(self):
         """returns the value of x"""
         return self.__x
+
     @x.setter
     def x(self, value):
         """
@@ -100,6 +101,7 @@ class Rectangle(Base):
     def y(self):
         """returns the value of y"""
         return self.__y
+
     @y.setter
     def y(self, value):
         """
@@ -133,10 +135,10 @@ class Rectangle(Base):
 
     def __str__(self):
         """Overides the __str__ method"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
 
     def update(self, *args):
-
 
         if len(args) >= 1:
             self.id = args[0]
