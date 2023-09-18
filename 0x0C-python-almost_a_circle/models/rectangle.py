@@ -38,9 +38,13 @@ class Rectangle(Base):
                 is less than 0.
         """
         super().__init__(id)
+        self.__width = 0
         self.width = width
+        self.__height = 0
         self.height = height
+        self.__x = 0
         self.x = x
+        self.__y = 0
         self.y = y
 
 #        if not isinstance(self.__height, int):
