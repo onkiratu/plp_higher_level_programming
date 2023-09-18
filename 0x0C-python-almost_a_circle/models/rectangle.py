@@ -13,7 +13,7 @@ class Rectangle(Base):
         __width (int): The width of the rectangle.
         __height (int): The height of the rectangle.
         __x (int): The x-coordinate of the top-left corner of the rectangle.
-         __y (int): The y-coordinate of the top-left corner of the rectangle. 
+         __y (int): The y-coordinate of the top-left corner of the rectangle
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -40,6 +40,30 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+
+        if not isinstance(self.__height, int):
+            raise TypeError("height must be an integer")
+
+        if self.__height <= 0:
+            raise ValueError("height must be > 0")
+
+        if not isinstance(self.__width, int):
+            raise TypeError("width must be > 0")
+
+        if self.__width <= 0:
+            raise ValueError("width must be an integer")
+
+        if not isinstance(self.__x, int):
+            raise TypeError("x must be an integer")
+
+        if not isinstance(self.__y, int):
+            raise TypeError("y must be an integer")
+
+        if self.__x < 0:
+            raise ValueError("x must be >= 0")
+
+        if self.__y < 0:
+            raise ValueError("y must be >= 0")
 
     @property
     def width(self):
