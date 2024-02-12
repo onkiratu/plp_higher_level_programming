@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-"""
-Module contains a script tat fetches https://alx-intranet.hbtn.io/status
-"""
+"Module contains a script tat fetches https://alx-intranet.hbtn.io/status"
 import urllib.request
+
 
 if __name__ == "__main__":
     url = "https://alx-intranet.hbtn.io/status"
