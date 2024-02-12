@@ -9,4 +9,4 @@ if __name__ == "__main__":
         data = response.read()
         print(f"- type: {type(data)}")
         print(f"- content: {data}")
-        print(f"- utf8 content: {data.decode("utf-8")}")
+        print(f"- utf8 content: {data.decode('utf-8')}")
