@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-
 """
 Module contains a script tat fetches https://alx-intranet.hbtn.io/status
 """
-from urllib.request import urlopen
+import urllib.request
 
 if __name__ == "__main__":
 
     url = "https://alx-intranet.hbtn.io/status"
-    with urlopen(url) as response:
+    with urllib.request.urlopen(url) as response:
         data = response.read()
         print("Body response:")
         print(f"\t - type: {type(data)}")
